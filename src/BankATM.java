@@ -1,15 +1,19 @@
+//class BankATMException created to handle and throw user defined exception
 class BankATMException extends Exception
 {
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+// Parameterized constructor
+	
 	public BankATMException(String mymsg)
     {
         super(mymsg);
     }
 }
+
+//BankATM class created to do operation and throw out the user defined exeption
 public class BankATM {
 	
 	int atmId; 
@@ -28,17 +32,22 @@ public class BankATM {
 	
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
+		
+		//three objects created of BankATM class.
+		
 		BankATM b1=new BankATM();
 		BankATM b2=new BankATM(20000);
 		BankATM b3=new BankATM();
 		//b1.deposit(30000);
+		//calling withdraw class to throw the user defined exceptions
+		
 		b2.withdraw(8000);
 		b3.withdraw(2000);
 		//b3.withdraw(5000);
 		//b1.withdraw(5000);
 	}
 	
-	// Deposite method to deposite balance.
+	// Deposit method to deposit balance.
 	
     public void deposit(double amt)
     {
